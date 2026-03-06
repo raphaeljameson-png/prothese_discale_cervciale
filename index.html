@@ -100,13 +100,14 @@
     margin-top: 6px;
     color: var(--muted);
     font-size: 13px;
+    display: flex;
+    gap: 30px;
   }
 
   h3 {
     margin: 22px 0 8px;
     font-size: 16px;
     color: var(--accent);
-    text-transform: uppercase;
   }
   h4 {
     margin: 14px 0 6px;
@@ -114,7 +115,7 @@
     color: var(--ink);
   }
   p { margin: 8px 0; }
-  ul { margin: 8px 0 8px 18px; }
+  ul, ol { margin: 8px 0 8px 18px; }
   li { margin: 4px 0; }
 
   .note {
@@ -176,7 +177,6 @@
     @page { size: A4; margin: 12mm; }
   }
 
-
 /* Print layout improvements */
 @media print {
   .no-print, .no-print * { display: none !important; }
@@ -185,9 +185,9 @@
 </style>
 </head>
 <body>
-<div class="toolbar">
+<div class="toolbar no-print">
 <div class="toolbar-inner">
-<div style="font-weight:700;">Fiche Prothèse discale cervicale</div>
+<div style="font-weight:700;">Fiche Prothèse Discale Cervicale</div>
 <button class="btn primary" onclick="window.print()">Imprimer / Sauvegarder PDF</button>
 </div>
 </div>
@@ -202,146 +202,214 @@
 </div>
 </header>
 <div class="doc-title">
-<h2>FICHE D'INFORMATION PATIENT — Prothèse discale cervicale</h2>
+<h2>FICHE D'INFORMATION PATIENT — Prothèse discale cervicale (Arthroplastie)</h2>
 <div class="meta">
-<div><strong>Document remis le :</strong> </div>
-<div><strong>Patient(e) :</strong> </div>
+<div><strong>Document remis le :</strong> ____ / ____ / ________</div>
+<div><strong>Patient(e) :</strong> ___________________________________</div>
 </div>
 </div>
 <div class="note">
         Cette fiche d'information a été conçue pour vous fournir un support complet à l'information orale délivrée par votre chirurgien au cours des consultations.
-        Elle ne se substitue pas à l'entretien direct avec votre médecin, qui reste le seul à pouvoir adapter l'information à votre situation personnelle.
-        Conformément à la législation en vigueur, vous devez disposer d'une information claire, loyale et appropriée avant toute intervention.
-</div>
+        Elle ne se substitue pas à l'entretien direct avec votre médecin, qui reste le seul à pouvoir adapter l'information à votre situation personnelle et à répondre à vos questions.
+        Conformément à la législation en vigueur (loi du 4 mars 2002 relative aux droits des malades), vous devez disposer d'une information claire, loyale et appropriée avant toute intervention.
+        Ce document en constitue la trace écrite.
+      </div>
 
-<h3>CHAPITRE 1 — COMPRENDRE LA MALADIE DISCALE CERVICALE</h3>
+<h3>CHAPITRE 1 — COMPRENDRE LA PATHOLOGIE CERVICALE</h3>
 <h4>1.1 Rappel anatomique</h4>
-<p>La colonne vertébrale cervicale est constituée de sept vertèbres (C1 à C7) séparées par des <strong>disques intervertébraux</strong> qui jouent un rôle d'amortisseur et permettent la mobilité du cou. Chaque disque comprend un anneau fibreux périphérique (annulus) et un noyau gélatineux central (nucleus).</p>
-<p>Le <strong>canal rachidien</strong>, situé derrière les vertèbres, contient la <strong>moelle épinière</strong> et les racines nerveuses qui commandent les bras et les mains.</p>
+<p>La colonne vertébrale cervicale (le cou) est composée de 7 vertèbres (C1 à C7). Entre chaque vertèbre se trouve un <strong>disque intervertébral</strong> qui agit comme un amortisseur et permet les mouvements de la tête. En arrière de ces disques se trouve le canal rachidien qui contient la <strong>moelle épinière</strong> et les <strong>racines nerveuses</strong> qui se dirigent vers les bras et les mains.</p>
 
-<h4>1.2 La discopathie et la hernie discale cervicale</h4>
-<p>Dès l'âge de 30 ans, le disque peut subir une déshydratation naturelle appelée <strong>discopathie</strong>. Si l'anneau fibreux se fissure, le noyau peut faire saillie et comprimer un nerf : c'est la <strong>hernie discale cervicale</strong>.</p>
-<p>Cette compression entraîne souvent une douleur vive dans le bras appelée <strong>névralgie cervico-brachiale (NCB)</strong>, accompagnée de fourmillements ou d'une perte de force. Dans les cas graves, la compression de la moelle épinière peut causer une faiblesse dans les jambes et des troubles de la marche.</p>
+<h4>1.2 Névralgie cervico-brachiale et myélopathie</h4>
+<p>Avec le temps ou suite à des traumatismes, le disque peut s'user, s'écraser (discopathie) ou se fissurer, laissant échapper un fragment : c'est la <strong>hernie discale cervicale</strong>. L'arthrose (cervicarthrose) peut également créer des becs osseux (ostéophytes).</p>
 
-<h4>1.3 La prothèse discale cervicale (Arthroplastie)</h4>
-<p>L'objectif de la prothèse est de remplacer le disque usé pour supprimer la compression nerveuse tout en <strong>préservant la mobilité</strong> naturelle du cou. Contrairement à l'arthrodèse (fusion), elle vise à protéger les disques voisins d'une usure accélérée en maintenant une dynamique physiologique.</p>
+<p>Si ces éléments viennent comprimer un nerf, cela provoque une douleur fulgurante qui descend dans le bras, souvent associée à des fourmillements : c'est la <strong>névralgie cervico-brachiale (NCB)</strong>, souvent appelée "sciatique du bras". Plus rarement, la compression peut toucher la moelle épinière elle-même, provoquant une perte de force ou d'équilibre (myélopathie cervicarthrosique).</p>
 
-<h3>CHAPITRE 2 — LES TRAITEMENTS NON CHIRURGICAUX</h3>
-<p>La chirurgie n'intervient qu'après échec des traitements médicaux conduits pendant plusieurs semaines.</p>
+<h4>1.3 L'objectif de la prothèse discale</h4>
+<p>Traditionnellement, la chirurgie cervicale consistait à retirer le disque malade et à souder les vertèbres ensemble (arthrodèse). La <strong>prothèse discale cervicale</strong> (ou arthroplastie) est une alternative moderne : le disque malade est remplacé par un implant artificiel articulé. Son but est de soulager le nerf coincé <strong>tout en préservant la mobilité naturelle de votre cou</strong> et en protégeant les disques voisins d'une usure prématurée.</p>
+
+<h3>CHAPITRE 2 — LES OPTIONS THÉRAPEUTIQUES NON CHIRURGICALES</h3>
+<p>Sauf en cas d'urgence neurologique (perte de force dans le bras), le traitement médical est toujours tenté en première intention pendant au moins 4 à 6 semaines.</p>
 <ul>
-<li><strong>Médicaments</strong> : Antalgiques, anti-inflammatoires et myorelaxants.</li>
-<li><strong>Immobilisation</strong> : Port temporaire d'un collier cervical souple.</li>
-<li><strong>Kinésithérapie</strong> : Rééducation posturale et massages décontracturants.</li>
-<li><strong>Infiltrations</strong> : Injections locales de corticoïdes sous guidage radiologique.</li>
+<li><strong>Traitement médicamenteux :</strong> Antalgiques puissants, anti-inflammatoires (AINS ou corticoïdes) et myorelaxants.</li>
+<li><strong>Immobilisation :</strong> Port d'un collier cervical (minerve) souple ou semi-rigide pour soulager les tensions musculaires du cou.</li>
+<li><strong>Infiltrations cervicales :</strong> Beaucoup plus rares et complexes qu'au niveau lombaire, elles peuvent parfois être proposées sous contrôle radiologique strict.</li>
+<li><strong>Traction cervicale ou kinésithérapie :</strong> À n'envisager qu'après la phase aiguë de la douleur.</li>
 </ul>
 
-<h3>CHAPITRE 3 — INDICATIONS ET CONTRE-INDICATIONS</h3>
-<h4>3.1 Indications et profil idéal</h4>
+<h3>CHAPITRE 3 — INDICATIONS OPÉRATOIRES ET CONTRE-INDICATIONS</h3>
+<h4>3.1 Les indications chirurgicales (Le candidat idéal)</h4>
+<p>La pose d'une prothèse est envisagée en cas d'échec du traitement médical face à une névralgie cervico-brachiale invalidante. Le candidat idéal est un adulte jeune ou d'âge moyen, présentant une hernie discale "molle" (récente) sur 1 ou 2 niveaux maximum.</p>
+
+<h4>3.2 Contre-indications (Pourquoi choisir l'arthrodèse plutôt que la prothèse ?)</h4>
+<p>La prothèse ne s'adresse pas à tout le monde. L'<strong>arthrodèse (fusion)</strong> restera la meilleure indication dans les cas suivants :</p>
 <ul>
-<li>Douleurs cervicales ou radiculaires (bras) invalidantes résistant au traitement médical.</li>
-<li>Hernie discale localisée sur un ou deux niveaux.</li>
-<li>Patient actif, sans arthrose majeure ni instabilité vertébrale.</li>
+<li>Arthrose cervicale sévère sur les articulations arrière (facettes).</li>
+<li>Instabilité de la colonne cervicale ou déformation importante (cyphose).</li>
+<li>Ostéoporose (risque d'enfoncement de la prothèse dans l'os).</li>
+<li>Compression sévère de la moelle épinière (myélopathie).</li>
 </ul>
 
-<h4>3.2 Contre-indications et conversion</h4>
-<p>Une <strong>arthrodèse</strong> sera préférée en cas d'arthrose facettaire sévère, d'ostéoporose marquée ou d'instabilité documentée.</p>
 <div class="note warn">
-<strong>⚠️ Avertissement Médico-légal :</strong> 
-En cas de difficulté anatomique ou de qualité osseuse insuffisante constatée lors de l'opération, le chirurgien peut décider de convertir la prothèse en <strong>arthrodèse (fusion)</strong> pour garantir votre sécurité.
+<strong>⚠️ Avertissement (Risque de conversion) :</strong>
+Il peut arriver, une fois au bloc opératoire, que le chirurgien constate que la qualité de votre os ou l'anatomie locale ne permet pas la pose sécurisée d'une prothèse. Dans ce cas, pour votre sécurité et pour garantir un bon résultat à long terme, l'intervention sera convertie en direct en <strong>arthrodèse cervicale (cage et/ou plaque)</strong>.
 </div>
 
-<h3>CHAPITRE 4 — TECHNIQUE CHIRURGICALE</h3>
-<h4>4.1 L'abord antérieur (par le cou)</h4>
-<p>L'opération se fait sous anesthésie générale par une incision discrète à l'avant du cou, permettant d'accéder au disque sans couper les muscles de la nuque. Le chirurgien écarte en douceur la trachée, l'œsophage et les vaisseaux pour atteindre la colonne.</p>
+<h3>CHAPITRE 4 — LA TECHNIQUE CHIRURGICALE</h3>
+<h4>4.1 L'abord antérieur (Par l'avant du cou)</h4>
+<p>L'intervention se déroule sous <strong>anesthésie générale</strong>. La colonne cervicale est abordée <strong>par l'avant</strong> (et non par la nuque). Le chirurgien réalise une petite incision horizontale (environ 3 à 5 cm) dans un pli du cou, généralement sur le côté droit ou gauche de la pomme d'Adam.</p>
+<p>Cette voie d'abord permet d'atteindre le disque en écartant très doucement la trachée, l'œsophage et les vaisseaux sanguins, sans avoir à couper les gros muscles de la nuque ni à manipuler la moelle épinière.</p>
 
-<h4>4.2 Déroulement</h4>
-<p>Sous microscope, le chirurgien retire le disque et la hernie pour libérer la moelle et les nerfs. La prothèse est ensuite insérée et centrée sous contrôle radioscopique. L'intervention dure environ 1 à 2 heures.</p>
-
-<h3>CHAPITRE 5 — RISQUES ET COMPLICATIONS SPÉCIFIQUES</h3>
-<h4>5.1 Risques liés à la voie d'abord et précoces</h4>
+<h4>4.2 Le geste chirurgical</h4>
 <ul>
-<li><strong>Gêne à la déglutition (Dysphagie)</strong> : Sensation de "grosse angine" fréquente les premiers jours, liée à l'écartement de l'œsophage.</li>
-<li><strong>Trouble de la voix (Dysphonie)</strong> : Voix rauque ou cassée par irritation du nerf laryngé. Généralement transitoire (2%), exceptionnellement définitive.</li>
-<li><strong>Hématome compressif</strong> : Un saignement dans le cou peut comprimer la trachée et gêner la respiration. C'est une urgence chirurgicale rare mais grave.</li>
-<li><strong>Lésions vasculaires</strong> : Atteinte exceptionnelle de la carotide ou de l'artère vertébrale (pouvant causer un AVC).</li>
-<li><strong>Brèche durale</strong> : Fuite de liquide céphalo-rachidien pouvant causer des migraines.</li>
-<li><strong>Phlébite et embolie pulmonaire</strong> : Risque général lié à l'alitement, prévenu par un lever précoce.</li>
+<li><strong>Discectomie :</strong> Le chirurgien retire la totalité du disque malade et de la hernie.</li>
+<li><strong>Décompression :</strong> Il libère parfaitement le nerf ou la moelle épinière coincés sous microscope opératoire.</li>
+<li><strong>Pose de la prothèse :</strong> Les plateaux vertébraux sont préparés, et la prothèse (composée de titane, polyéthylène ou céramique selon les modèles) est insérée sous contrôle radiologique pour remplacer le disque manquant.</li>
+<li><strong>Fermeture :</strong> Un petit drain peut être laissé en place pour 24h. La cicatrice est fermée de manière esthétique (fils résorbables ou intradermiques).</li>
 </ul>
 
-<h4>5.2 Risques liés à l'implant et tardifs</h4>
+<h3>CHAPITRE 5 — RÉSULTATS ATTENDUS, COMPLICATIONS ET RISQUES</h3>
+<h4>5.1 Résultats attendus</h4>
 <ul>
-<li><strong>Persistance des douleurs (Mémoire du nerf)</strong> : Si le nerf a été comprimé trop longtemps, des fourmillements ou douleurs peuvent persister malgré une chirurgie réussie.</li>
-<li><strong>Ossification péri-prothétique</strong> : Dans 5 à 30% des cas, l'os bloque l'implant au fil des ans, supprimant la mobilité (sans douleur le plus souvent).</li>
-<li><strong>Malposition ou subsidence</strong> : Enfoncement de la prothèse dans la vertèbre.</li>
-<li><strong>Risque neurologique grave</strong> : Tétraplégie par lésion accidentelle de la moelle épinière (exceptionnel).</li>
+<li><strong>Sur la douleur du bras (névralgie) :</strong> Le résultat est très souvent spectaculaire et immédiat dès le réveil.</li>
+<li><strong>Sur la douleur du cou (cervicalgie) :</strong> Elle peut mettre plus de temps à s'estomper et n'est pas toujours garantie de disparaître totalement, car l'arthrose globale du cou reste présente.</li>
+<li><strong>Mobilité :</strong> La prothèse permet de conserver la mobilité de flexion/extension et de rotation de votre tête.</li>
 </ul>
 
-<div class="note">
-<strong>Tabagisme :</strong> Le tabac augmente drastiquement les risques d'infection et retarde la cicatrisation cutanée. Son arrêt est impératif avant et après l'opération.
-</div>
+<h4>5.2 Complications spécifiques à l'abord par l'avant du cou</h4>
+<p><strong>Troubles de la déglutition (Dysphagie)</strong></p>
+<ul>
+<li>L'œsophage doit être doucement écarté pendant l'opération. Il est très fréquent de ressentir une gêne pour avaler (comme une grosse angine) pendant quelques jours à quelques semaines. C'est transitoire.</li>
+</ul>
+<p><strong>Troubles de la voix (Dysphonie)</strong></p>
+<ul>
+<li>Le nerf récurrent (qui commande les cordes vocales) passe dans la zone opératoire. Son étirement peut provoquer une voix rauque ou cassée. Cela récupère le plus souvent en quelques semaines, mais peut nécessiter parfois une rééducation orthophonique.</li>
+</ul>
+<p><strong>Hématome compressif (Urgence)</strong></p>
+<ul>
+<li>Un saignement dans le cou post-opératoire peut comprimer la trachée et gêner la respiration. C'est rare (&lt;1%) mais cela justifie une surveillance étroite les premières 24 heures et parfois une réintervention en urgence pour évacuer le sang.</li>
+</ul>
 
-<h3>CHAPITRE 6 — CONVALESCENCE ET REPRISE</h3>
-<h4>6.1 Hospitalisation et premiers jours</h4>
-<p>L'hospitalisation dure 1 à 3 jours. Le lever est autorisé dès le jour même. Des douleurs entre les omoplates sont fréquentes au début.</p>
+<h4>5.3 Risques neurologiques et généraux</h4>
+<p><strong>Lésion nerveuse ou médullaire :</strong> La paralysie (tétraplégie) est le risque le plus redouté, mais il est <strong>exceptionnel</strong>. L'abord par l'avant est justement conçu pour éviter de manipuler la moelle épinière.</p>
+<p><strong>Brèche durale :</strong> Fuite de liquide entourant les nerfs. Gérée au bloc, elle est rare sur les hernies cervicales primaires.</p>
+<p><strong>Infection :</strong> Rare sur le rachis cervical antérieur. Prévenue par l'asepsie et des antibiotiques per-opératoires.</p>
 
-<h4>6.2 Tableau des reprises d'activité</h4>
+<h4>5.4 Risques liés à la prothèse elle-même</h4>
+<p><strong>Ossification hétérotopique :</strong> Au fil des années, l'os peut repousser autour de la prothèse, finissant par la bloquer. La prothèse se comporte alors comme une arthrodèse. Ce n'est généralement pas douloureux, mais l'avantage de la mobilité est perdu.</p>
+<p><strong>Déplacement ou enfoncement (Subsidence) :</strong> L'implant peut s'enfoncer dans l'os si celui-ci est trop fragile, nécessitant parfois une réintervention pour fixer les vertèbres (arthrodèse).</p>
+
+<h3>CHAPITRE 6 — HOSPITALISATION ET CONVALESCENCE</h3>
+<h4>6.1 L'hospitalisation</h4>
+<p>La chirurgie de prothèse cervicale permet une récupération très rapide. L'hospitalisation dure en général de <strong>24 à 48 heures</strong>, et peut même se faire en <strong>ambulatoire</strong> dans certains centres si tous les critères de sécurité sont réunis. Le lever est autorisé le soir même de l'intervention.</p>
+
+<h4>6.2 Signes d'alerte — consulter en urgence après l'opération</h4>
+<div class="note warn">
 <table>
-<thead>
-<tr><th>Activité</th><th>Délai moyen</th><th>Conditions particulières</th></tr>
-</thead>
+<thead><tr><th>Signe d'alerte</th><th>Action</th></tr></thead>
 <tbody>
-<tr><td>Marche et vie quotidienne</td><td>Dès J+1</td><td>Éviter de porter plus de 3 kg</td></tr>
-<tr><td>Conduite automobile</td><td>2 à 4 semaines</td><td>Si les contrôles d'angles morts sont indolores</td></tr>
-<tr><td><strong>Arrêt de travail</strong></td><td><strong>4 à 6 semaines</strong></td><td>Jusqu'à 3 mois pour les métiers physiques</td></tr>
-<tr><td>Sport doux (natation, vélo)</td><td>4 à 6 semaines</td><td>Éviter le crawl et le papillon au début</td></tr>
-<tr><td>Sports d'impact</td><td>3 à 6 mois</td><td>Après accord du chirurgien</td></tr>
-</tbody>
-</table>
-
-<h4>6.3 Signes d'alerte postopératoires</h4>
-<div class="note warn">
-<table style="margin-top:0;">
-<thead>
-<tr><th>Symptôme</th><th>Risque</th><th>Action</th></tr>
-</thead>
-<tbody>
-<tr><td>**Gonflement du cou + Gêne respiratoire**</td><td>Hématome compressif</td><td>**URGENCE 15**</td></tr>
-<tr><td>Impossibilité d'avaler même les liquides</td><td>Trouble majeur</td><td>Consulter rapidement</td></tr>
-<tr><td>Fièvre + Écoulement de la cicatrice</td><td>Infection</td><td>Consulter rapidement</td></tr>
-<tr><td>Faiblesse brutale dans les bras ou jambes</td><td>Atteinte nerveuse</td><td>Urgence médicale</td></tr>
+<tr><td>Gonflement rapide du cou ou difficulté respiratoire soudaine</td><td><strong>URGENCE ABSOLUE (Appeler le 15)</strong> - Hématome compressif</td></tr>
+<tr><td>Fièvre &gt; 38°C, rougeur ou écoulement de la cicatrice</td><td>Consulter (Risque d'infection)</td></tr>
+<tr><td>Perte de force brutale dans les bras ou les jambes</td><td>Urgence - Évaluation neurologique requise</td></tr>
+<tr><td>Difficulté extrême à avaler empêchant de boire</td><td>Consulter rapidement</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>FOIRE AUX QUESTIONS (FAQ)</h3>
-<h4>1. Prothèse ou arthrodèse ?</h4> La prothèse garde le cou mobile et protège les autres disques, l'arthrodèse soude les vertèbres pour stabiliser une zone très abîmée.
-<h4>2. Pourquoi passer par le cou ?</h4> C'est le chemin le plus sûr pour atteindre le disque sans toucher à la moelle épinière située derrière.
-<h4>3. La cicatrice sera-t-elle visible ?</h4> Elle mesure 3 à 5 cm et se cache dans un pli du cou ; elle devient presque invisible en quelques mois.
-<h4>4. Vais-je perdre ma voix ?</h4> Une voix cassée est possible pendant quelques jours par irritation nerveuse, c'est très rarement définitif.
-<h4>5. Est-ce douloureux ?</h4> Les douleurs du bras disparaissent souvent vite, mais des courbatures cervicales persistent quelques jours.
-<h4>6. Faut-il porter une minerve ?</h4> Un collier souple est souvent prescrit pour 1 à 3 semaines pour le confort, mais n'est pas toujours obligatoire.
-<h4>7. Quelle est la durée de vie de l'implant ?</h4> Ils sont conçus pour durer toute la vie sans usure majeure.
-<h4>8. Retrouverai-je toute ma mobilité ?</h4> Oui, c'est le but de la prothèse : restaurer des mouvements fluides du cou.
-<h4>9. Que se passe-t-il si la prothèse se bloque ?</h4> L'os peut parfois fusionner autour. Cela annule la mobilité mais ne provoque généralement pas de douleur.
-<h4>10. Y a-t-il un risque de paralysie ?</h4> C'est une crainte majeure, mais ce risque est **exceptionnel** grâce aux techniques de microchirurgie.
-<h4>11. Quand reprendre le volant ?</h4> Dès que vous pouvez tourner la tête rapidement sans douleur (environ 2 à 4 semaines).
-<h4>12. Quel arrêt de travail prévoir ?</h4> Entre 4 et 8 semaines selon votre métier.
-<h4>13. Pourquoi arrêter de fumer ?</h4> Le tabac multiplie par 5 le risque d'infection et de mauvaise cicatrisation.
-<h4>14. Les portiques d'aéroport vont-ils sonner ?</h4> Généralement non. Une carte d'implant vous sera remise par précaution.
-<h4>15. Pourrai-je passer des IRM ?</h4> Oui, les prothèses en titane ou polyéthylène sont totalement compatibles avec l'IRM.
+<h4>6.3 La Rééducation post-opératoire (Les 3 phases)</h4>
+<p><strong>Phase 1 : La cicatrisation et repos (Semaines 0 à 4)</strong></p>
+<ul>
+<li><strong>Minerve :</strong> Contrairement à l'arthrodèse, la prothèse ne nécessite <strong>aucun port de minerve rigide</strong>. Un simple collier mousse peut vous être proposé pour le confort les premiers jours (trajets en voiture).</li>
+<li><strong>Mobilisation :</strong> Bougez votre cou doucement, selon la douleur. Ne forcez pas.</li>
+<li><strong>Activités :</strong> Marche quotidienne recommandée. Évitez de porter des charges lourdes (> 3-5 kg) et les travaux bras en l'air.</li>
+</ul>
 
-<h3>MES NOTES / QUESTIONS</h3>
-<p>.......................................................................................................................................................</p>
-<p>.......................................................................................................................................................</p>
+<p><strong>Phase 2 : Le réveil musculaire (Semaines 4 à 8)</strong></p>
+<ul>
+<li>Début de la <strong>kinésithérapie douce</strong>. L'objectif est de relâcher les contractures des trapèzes et des cervicales, et de retrouver une mobilité fluide.</li>
+<li>Reprise des sports doux : vélo d'appartement, natation (dos crawlé, éviter la brasse qui cambre le cou).</li>
+</ul>
+
+<p><strong>Phase 3 : La récupération fonctionnelle (À partir de 2 à 3 mois)</strong></p>
+<ul>
+<li>Renforcement isométrique des muscles du cou.</li>
+<li>Reprise progressive de toutes les activités, y compris les sports d'impact, après feu vert de votre chirurgien.</li>
+</ul>
+
+<h4>6.4 Reprises d'activités — chronologie indicative</h4>
+<table>
+<thead><tr><th>Activité</th><th>Délai approximatif</th><th>Conditions</th></tr></thead>
+<tbody>
+<tr><td>Marche simple</td><td>Dès J+0</td><td>À votre rythme</td></tr>
+<tr><td>Alimentation solide</td><td>J+1 ou J+2</td><td>Si la déglutition est confortable (privilégier le mou au début)</td></tr>
+<tr><td>Conduite automobile</td><td>2 à 3 semaines</td><td>Nécessite de pouvoir tourner la tête sans douleur (angles morts)</td></tr>
+<tr><td>Arrêt de travail (bureau/sédentaire)</td><td>3 à 6 semaines</td><td>Selon fatigue et aménagement du poste</td></tr>
+<tr><td>Arrêt de travail (physique lourd)</td><td>2 à 3 mois</td><td>Accord chirurgical requis</td></tr>
+<tr><td>Sport avec impacts (course, tennis)</td><td>3 mois</td><td>Validation chirurgicale et radiologique</td></tr>
+</tbody>
+</table>
+
+<h3>FOIRE AUX QUESTIONS (FAQ) — LES 15 QUESTIONS LES PLUS POSÉES</h3>
+<div class="note">
+<p><strong>1. Est-ce que je vais avoir très mal au réveil ?</strong><br>
+La douleur dans le bras (névralgie) disparaît souvent instantanément. En revanche, vous aurez mal à la gorge (comme une grosse angine), une difficulté à avaler, et des courbatures dans la nuque et les épaules. Ces douleurs sont normales et bien gérées par les antalgiques.</p>
+
+<p><strong>2. Dois-je porter une minerve (collier cervical) ?</strong><br>
+Généralement non. Le grand avantage de la prothèse est d'être stable immédiatement. Une minerve en mousse souple peut être utilisée de façon très ponctuelle (lors d'un trajet en voiture) pour soulager la fatigue musculaire les premiers jours.</p>
+
+<p><strong>3. Vais-je avoir du mal à avaler (dysphagie) ?</strong><br>
+Oui, c'est très fréquent. La trachée et l'œsophage ayant été écartés pendant l'opération, ils sont irrités. Prévoyez une alimentation molle (purées, soupes, compotes) pour les premiers jours. Cela rentre dans l'ordre en 1 à 3 semaines.</p>
+
+<p><strong>4. Quelle est la durée de vie de la prothèse ? Faut-il la changer ?</strong><br>
+Les prothèses cervicales actuelles sont conçues pour durer toute la vie. Les études avec plus de 15 ans de recul montrent une excellente résistance à l'usure mécanique. Le remplacement d'une prothèse usée est exceptionnel.</p>
+
+<p><strong>5. Quand puis-je reprendre le sport de haut niveau ?</strong><br>
+La reprise est plus rapide qu'avec une arthrodèse. Les sports sans impact (vélo, marche) débutent vers 4 semaines. Pour les sports d'impact (course, sports de raquette) ou de contact (rugby, judo), il faut attendre 3 à 6 mois et obtenir l'accord du chirurgien.</p>
+
+<p><strong>6. Est-ce que je vais sonner aux portiques d'aéroport ?</strong><br>
+Non. La masse de métal (titane) d'une prothèse cervicale est trop petite pour déclencher les détecteurs de métaux de sécurité.</p>
+
+<p><strong>7. Puis-je passer des IRM avec cette prothèse ?</strong><br>
+Absolument. Les matériaux utilisés (titane, PEEK, céramique) sont amagnétiques. L'IRM est sans aucun danger, bien que la prothèse puisse créer un petit "flou" local sur l'image.</p>
+
+<p><strong>8. L'opération se fait-elle par l'avant ou par l'arrière du cou ?</strong><br>
+Exclusivement par l'avant (voie antérieure). Cela permet de passer par des "chemins" naturels entre les muscles et les organes, sans avoir à couper les gros muscles porteurs situés à l'arrière de la nuque.</p>
+
+<p><strong>9. Vais-je perdre la mobilité de mon cou ?</strong><br>
+C'est tout l'inverse ! Le but spécifique de la prothèse discale, par rapport à l'arthrodèse classique, est de conserver la mobilité articulaire physiologique de votre cou.</p>
+
+<p><strong>10. Est-ce que je risque d'être paralysé(e) ?</strong><br>
+C'est la crainte majeure des patients, mais ce risque de blessure de la moelle épinière est exceptionnel (taux proche de zéro). La chirurgie est réalisée sous microscope avec une visualisation parfaite.</p>
+
+<p><strong>11. Quelles sont les alternatives si mon os est trop fragile ?</strong><br>
+Si le chirurgien estime que votre os est ostéoporotique ou que l'arthrose est trop sévère, il réalisera une "arthrodèse" (fusion). On remplace le disque par une cale en plastique/carbone (cage) remplie d'os, pour souder les deux vertèbres ensemble.</p>
+
+<p><strong>12. Ma voix va-t-elle changer après l'opération ?</strong><br>
+Il est possible que votre voix soit un peu rauque ou affaiblie les premières semaines (dysphonie). Cela est dû à l'étirement transitoire du petit nerf qui commande les cordes vocales. La récupération est habituelle.</p>
+
+<p><strong>13. Combien de temps dure l'arrêt de travail ?</strong><br>
+Il dépend de votre profession. Comptez 3 à 6 semaines pour un travail de bureau, et jusqu'à 3 mois pour un travail très physique nécessitant le port de lourdes charges.</p>
+
+<p><strong>14. Faut-il retirer les fils de suture ?</strong><br>
+Le plus souvent, non. La cicatrice est fermée par des fils résorbables cachés sous la peau (surjet intradermique) ou de la colle biologique. Votre chirurgien vous le précisera à la sortie.</p>
+
+<p><strong>15. Y a-t-il un risque de "rejet" de la prothèse ?</strong><br>
+Non. Les matériaux employés sont parfaitement biocompatibles et utilisés en chirurgie orthopédique depuis des décennies. L'allergie au titane est extrêmement rare.</p>
+</div>
+
+<h3>QUESTIONS À POSER À VOTRE CHIRURGIEN</h3>
+<ol>
+<li>Pensez-vous que je sois un bon candidat pour une prothèse, ou l'arthrodèse est-elle plus sûre pour moi ?</li>
+<li>Devrons-nous opérer un seul ou deux niveaux cervicaux ?</li>
+<li>Pensez-vous que la chirurgie puisse se faire en ambulatoire ?</li>
+<li>Quand pourrai-je reconduire et reprendre mon activité sportive spécifique ?</li>
+<li>La cicatrice se verra-t-elle beaucoup à long terme ?</li>
+</ol>
 
 <h3>CONSENTEMENT ÉCLAIRÉ</h3>
-<p>J'atteste avoir reçu cette fiche d'information et en avoir pris connaissance. J'ai compris la nature de l'intervention, ses bénéfices et ses risques (vasculaires, neurologiques, déglutition, voix). J'ai été informé de la possibilité de conversion en arthrodèse en cours d'opération.</p>
-<p><strong>Date :</strong> ____ / ____ / ________</p>
-<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:10px;">
-  <p style="margin:0;flex:1;min-width:280px;"><strong>Nom du patient : </strong>_______________________</p>
-  <p style="margin:0;flex:1;min-width:280px;"><strong>Signature :</strong> _______________________</p>
-</div>
+<p>J'atteste avoir reçu cette fiche d'information et en avoir pris connaissance. J'ai pu poser les questions que je souhaitais et j'ai obtenu des réponses satisfaisantes. J'ai compris la nature de l'intervention (prothèse discale cervicale par voie antérieure), ses bénéfices attendus (sur la névralgie), ses risques (notamment troubles de la voix et de la déglutition), et la possibilité de conversion chirurgicale en arthrodèse (fusion) si l'anatomie ou la qualité osseuse l'exige en per-opératoire.</p>
+<p><strong>Date :</strong> </p>
 
+<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:10px;"><p style="margin:0;flex:1;min-width:280px;"><strong>Nom et prénom du patient : </strong>________________________________</p><p style="margin:0;flex:1;min-width:280px;"><strong>Signature du patient :</strong> ________________________________</p></div>
 <footer>
 <div><strong>Espace Francilien du Rachis</strong> — 95, rue de Prony, 75017 Paris</div>
 <div>Dr Raphaël Jameson : dr.jameson@rachis.paris · Dr Mayalen Lamerain : dr.mlamerain@gmail.com · Dr Christophe Travert : dr.ctravert@gmail.com</div>
@@ -351,7 +419,3 @@ En cas de difficulté anatomique ou de qualité osseuse insuffisante constatée 
 </div>
 </body>
 </html>
-
-```
-
-Souhaitez-vous continuer avec la fiche du **Canal Lombaire Étroit** ou celle de l'**Arthrodèse Lombaire** pour compléter votre bibliothèque ?
