@@ -1,0 +1,362 @@
+C'est entendu. J'ai enrichi le document en intégrant ces précisions cruciales (tabagisme, phlébite, mémoire du nerf, artère vertébrale et détails de convalescence) pour aboutir à une fiche de prothèse cervicale d'un niveau de détail équivalent à vos fiches lombaires.
+
+Voici le code HTML **complet et harmonisé** à ajouter sur votre dépôt GitHub (par exemple sous le nom `prothese_cervicale.html`) :
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Fiche d'information patient — Prothèse discale cervicale</title>
+<style>
+  :root {
+    --ink:#111;
+    --muted:#444;
+    --accent:#0b6fa4;      /* bleu */
+    --accent2:#22b8b8;     /* turquoise */
+    --bg:#fff;
+    --border:#d9d9d9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3f5f7;
+    color: var(--ink);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
+    line-height: 1.35;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: rgba(255,255,255,.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+  }
+  .toolbar-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toolbar .btn {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .toolbar .btn.primary {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 22px auto;
+    padding: 0 16px 28px;
+  }
+  .page {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px 34px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  header.top {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--accent);
+  }
+  header.top img {
+    width: 110px;
+    height: auto;
+  }
+  .brand h1 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+  }
+  .brand .line {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  .doc-title {
+    margin-top: 18px;
+    border-left: 6px solid var(--accent2);
+    padding-left: 14px;
+  }
+  .doc-title h2 {
+    margin: 0;
+    font-size: 22px;
+  }
+  .doc-title .meta {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  h3 {
+    margin: 22px 0 8px;
+    font-size: 16px;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  h4 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0 8px 18px; }
+  li { margin: 4px 0; }
+
+  .note {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--accent2);
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fbfeff;
+    margin: 12px 0;
+  }
+  .warn {
+    border-left-color: #d93025;
+    background: #fff9f8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px;
+    font-size: 13px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  th {
+    background: #f6f8fa;
+    text-align: left;
+  }
+
+  .hr {
+    margin: 18px 0;
+    height: 1px;
+    background: var(--border);
+    border: 0;
+  }
+
+  footer {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .toolbar { display: none; }
+    .wrap { margin: 0; padding: 0; }
+    .page {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 14mm 14mm;
+    }
+    a { color: inherit; text-decoration: none; }
+    @page { size: A4; margin: 12mm; }
+  }
+
+
+/* Print layout improvements */
+@media print {
+  .no-print, .no-print * { display: none !important; }
+}
+@page { margin: 12mm; }
+</style>
+</head>
+<body>
+<div class="toolbar">
+<div class="toolbar-inner">
+<div style="font-weight:700;">Fiche Prothèse discale cervicale</div>
+<button class="btn primary" onclick="window.print()">Imprimer / Sauvegarder PDF</button>
+</div>
+</div>
+<div class="wrap">
+<div class="page">
+<header class="top">
+<img alt="Logo Espace Francilien du Rachis" src="logo.png"/>
+<div class="brand">
+<h1>ESPACE FRANCILIEN DU RACHIS</h1>
+<div class="line">95, rue de Prony — 75017 Paris | rachis.paris</div>
+<div class="line">Dr Raphaël Jameson · Dr Mayalen Lamerain · Dr Christophe Travert</div>
+</div>
+</header>
+<div class="doc-title">
+<h2>FICHE D'INFORMATION PATIENT — Prothèse discale cervicale</h2>
+<div class="meta">
+<div><strong>Document remis le :</strong> </div>
+<div><strong>Patient(e) :</strong> </div>
+</div>
+</div>
+<div class="note">
+        Cette fiche d'information a été conçue pour vous fournir un support complet à l'information orale délivrée par votre chirurgien au cours des consultations.
+        Elle ne se substitue pas à l'entretien direct avec votre médecin, qui reste le seul à pouvoir adapter l'information à votre situation personnelle.
+        Conformément à la législation en vigueur, vous devez disposer d'une information claire, loyale et appropriée avant toute intervention.
+</div>
+
+<h3>CHAPITRE 1 — COMPRENDRE LA MALADIE DISCALE CERVICALE</h3>
+<h4>1.1 Rappel anatomique</h4>
+<p>La colonne vertébrale cervicale est constituée de sept vertèbres (C1 à C7) séparées par des <strong>disques intervertébraux</strong> qui jouent un rôle d'amortisseur et permettent la mobilité du cou. Chaque disque comprend un anneau fibreux périphérique (annulus) et un noyau gélatineux central (nucleus).</p>
+<p>Le <strong>canal rachidien</strong>, situé derrière les vertèbres, contient la <strong>moelle épinière</strong> et les racines nerveuses qui commandent les bras et les mains.</p>
+
+<h4>1.2 La discopathie et la hernie discale cervicale</h4>
+<p>Dès l'âge de 30 ans, le disque peut subir une déshydratation naturelle appelée <strong>discopathie</strong>. Si l'anneau fibreux se fissure, le noyau peut faire saillie et comprimer un nerf : c'est la <strong>hernie discale cervicale</strong>.</p>
+<p>Cette compression entraîne souvent une douleur vive dans le bras appelée <strong>névralgie cervico-brachiale (NCB)</strong>, accompagnée de fourmillements ou d'une perte de force. Dans les cas graves, la compression de la moelle épinière peut causer une faiblesse dans les jambes et des troubles de la marche.</p>
+
+<h4>1.3 La prothèse discale cervicale (Arthroplastie)</h4>
+<p>L'objectif de la prothèse est de remplacer le disque usé pour supprimer la compression nerveuse tout en <strong>préservant la mobilité</strong> naturelle du cou. Contrairement à l'arthrodèse (fusion), elle vise à protéger les disques voisins d'une usure accélérée en maintenant une dynamique physiologique.</p>
+
+<h3>CHAPITRE 2 — LES TRAITEMENTS NON CHIRURGICAUX</h3>
+<p>La chirurgie n'intervient qu'après échec des traitements médicaux conduits pendant plusieurs semaines.</p>
+<ul>
+<li><strong>Médicaments</strong> : Antalgiques, anti-inflammatoires et myorelaxants.</li>
+<li><strong>Immobilisation</strong> : Port temporaire d'un collier cervical souple.</li>
+<li><strong>Kinésithérapie</strong> : Rééducation posturale et massages décontracturants.</li>
+<li><strong>Infiltrations</strong> : Injections locales de corticoïdes sous guidage radiologique.</li>
+</ul>
+
+<h3>CHAPITRE 3 — INDICATIONS ET CONTRE-INDICATIONS</h3>
+<h4>3.1 Indications et profil idéal</h4>
+<ul>
+<li>Douleurs cervicales ou radiculaires (bras) invalidantes résistant au traitement médical.</li>
+<li>Hernie discale localisée sur un ou deux niveaux.</li>
+<li>Patient actif, sans arthrose majeure ni instabilité vertébrale.</li>
+</ul>
+
+<h4>3.2 Contre-indications et conversion</h4>
+<p>Une <strong>arthrodèse</strong> sera préférée en cas d'arthrose facettaire sévère, d'ostéoporose marquée ou d'instabilité documentée.</p>
+<div class="note warn">
+<strong>⚠️ Avertissement Médico-légal :</strong> 
+En cas de difficulté anatomique ou de qualité osseuse insuffisante constatée lors de l'opération, le chirurgien peut décider de convertir la prothèse en <strong>arthrodèse (fusion)</strong> pour garantir votre sécurité.
+</div>
+
+<h3>CHAPITRE 4 — TECHNIQUE CHIRURGICALE</h3>
+<h4>4.1 L'abord antérieur (par le cou)</h4>
+<p>L'opération se fait sous anesthésie générale par une incision discrète à l'avant du cou, permettant d'accéder au disque sans couper les muscles de la nuque. Le chirurgien écarte en douceur la trachée, l'œsophage et les vaisseaux pour atteindre la colonne.</p>
+
+<h4>4.2 Déroulement</h4>
+<p>Sous microscope, le chirurgien retire le disque et la hernie pour libérer la moelle et les nerfs. La prothèse est ensuite insérée et centrée sous contrôle radioscopique. L'intervention dure environ 1 à 2 heures.</p>
+
+<h3>CHAPITRE 5 — RISQUES ET COMPLICATIONS SPÉCIFIQUES</h3>
+<h4>5.1 Risques liés à la voie d'abord et précoces</h4>
+<ul>
+<li><strong>Gêne à la déglutition (Dysphagie)</strong> : Sensation de "grosse angine" fréquente les premiers jours, liée à l'écartement de l'œsophage.</li>
+<li><strong>Trouble de la voix (Dysphonie)</strong> : Voix rauque ou cassée par irritation du nerf laryngé. Généralement transitoire (2%), exceptionnellement définitive.</li>
+<li><strong>Hématome compressif</strong> : Un saignement dans le cou peut comprimer la trachée et gêner la respiration. C'est une urgence chirurgicale rare mais grave.</li>
+<li><strong>Lésions vasculaires</strong> : Atteinte exceptionnelle de la carotide ou de l'artère vertébrale (pouvant causer un AVC).</li>
+<li><strong>Brèche durale</strong> : Fuite de liquide céphalo-rachidien pouvant causer des migraines.</li>
+<li><strong>Phlébite et embolie pulmonaire</strong> : Risque général lié à l'alitement, prévenu par un lever précoce.</li>
+</ul>
+
+<h4>5.2 Risques liés à l'implant et tardifs</h4>
+<ul>
+<li><strong>Persistance des douleurs (Mémoire du nerf)</strong> : Si le nerf a été comprimé trop longtemps, des fourmillements ou douleurs peuvent persister malgré une chirurgie réussie.</li>
+<li><strong>Ossification péri-prothétique</strong> : Dans 5 à 30% des cas, l'os bloque l'implant au fil des ans, supprimant la mobilité (sans douleur le plus souvent).</li>
+<li><strong>Malposition ou subsidence</strong> : Enfoncement de la prothèse dans la vertèbre.</li>
+<li><strong>Risque neurologique grave</strong> : Tétraplégie par lésion accidentelle de la moelle épinière (exceptionnel).</li>
+</ul>
+
+<div class="note">
+<strong>Tabagisme :</strong> Le tabac augmente drastiquement les risques d'infection et retarde la cicatrisation cutanée. Son arrêt est impératif avant et après l'opération.
+</div>
+
+<h3>CHAPITRE 6 — CONVALESCENCE ET REPRISE</h3>
+<h4>6.1 Hospitalisation et premiers jours</h4>
+<p>L'hospitalisation dure 1 à 3 jours. Le lever est autorisé dès le jour même. Des douleurs entre les omoplates sont fréquentes au début.</p>
+
+<h4>6.2 Tableau des reprises d'activité</h4>
+<table>
+<thead>
+<tr><th>Activité</th><th>Délai moyen</th><th>Conditions particulières</th></tr>
+</thead>
+<tbody>
+<tr><td>Marche et vie quotidienne</td><td>Dès J+1</td><td>Éviter de porter plus de 3 kg</td></tr>
+<tr><td>Conduite automobile</td><td>2 à 4 semaines</td><td>Si les contrôles d'angles morts sont indolores</td></tr>
+<tr><td><strong>Arrêt de travail</strong></td><td><strong>4 à 6 semaines</strong></td><td>Jusqu'à 3 mois pour les métiers physiques</td></tr>
+<tr><td>Sport doux (natation, vélo)</td><td>4 à 6 semaines</td><td>Éviter le crawl et le papillon au début</td></tr>
+<tr><td>Sports d'impact</td><td>3 à 6 mois</td><td>Après accord du chirurgien</td></tr>
+</tbody>
+</table>
+
+<h4>6.3 Signes d'alerte postopératoires</h4>
+<div class="note warn">
+<table style="margin-top:0;">
+<thead>
+<tr><th>Symptôme</th><th>Risque</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>**Gonflement du cou + Gêne respiratoire**</td><td>Hématome compressif</td><td>**URGENCE 15**</td></tr>
+<tr><td>Impossibilité d'avaler même les liquides</td><td>Trouble majeur</td><td>Consulter rapidement</td></tr>
+<tr><td>Fièvre + Écoulement de la cicatrice</td><td>Infection</td><td>Consulter rapidement</td></tr>
+<tr><td>Faiblesse brutale dans les bras ou jambes</td><td>Atteinte nerveuse</td><td>Urgence médicale</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>FOIRE AUX QUESTIONS (FAQ)</h3>
+<h4>1. Prothèse ou arthrodèse ?</h4> La prothèse garde le cou mobile et protège les autres disques, l'arthrodèse soude les vertèbres pour stabiliser une zone très abîmée.
+<h4>2. Pourquoi passer par le cou ?</h4> C'est le chemin le plus sûr pour atteindre le disque sans toucher à la moelle épinière située derrière.
+<h4>3. La cicatrice sera-t-elle visible ?</h4> Elle mesure 3 à 5 cm et se cache dans un pli du cou ; elle devient presque invisible en quelques mois.
+<h4>4. Vais-je perdre ma voix ?</h4> Une voix cassée est possible pendant quelques jours par irritation nerveuse, c'est très rarement définitif.
+<h4>5. Est-ce douloureux ?</h4> Les douleurs du bras disparaissent souvent vite, mais des courbatures cervicales persistent quelques jours.
+<h4>6. Faut-il porter une minerve ?</h4> Un collier souple est souvent prescrit pour 1 à 3 semaines pour le confort, mais n'est pas toujours obligatoire.
+<h4>7. Quelle est la durée de vie de l'implant ?</h4> Ils sont conçus pour durer toute la vie sans usure majeure.
+<h4>8. Retrouverai-je toute ma mobilité ?</h4> Oui, c'est le but de la prothèse : restaurer des mouvements fluides du cou.
+<h4>9. Que se passe-t-il si la prothèse se bloque ?</h4> L'os peut parfois fusionner autour. Cela annule la mobilité mais ne provoque généralement pas de douleur.
+<h4>10. Y a-t-il un risque de paralysie ?</h4> C'est une crainte majeure, mais ce risque est **exceptionnel** grâce aux techniques de microchirurgie.
+<h4>11. Quand reprendre le volant ?</h4> Dès que vous pouvez tourner la tête rapidement sans douleur (environ 2 à 4 semaines).
+<h4>12. Quel arrêt de travail prévoir ?</h4> Entre 4 et 8 semaines selon votre métier.
+<h4>13. Pourquoi arrêter de fumer ?</h4> Le tabac multiplie par 5 le risque d'infection et de mauvaise cicatrisation.
+<h4>14. Les portiques d'aéroport vont-ils sonner ?</h4> Généralement non. Une carte d'implant vous sera remise par précaution.
+<h4>15. Pourrai-je passer des IRM ?</h4> Oui, les prothèses en titane ou polyéthylène sont totalement compatibles avec l'IRM.
+
+<h3>MES NOTES / QUESTIONS</h3>
+<p>.......................................................................................................................................................</p>
+<p>.......................................................................................................................................................</p>
+
+<h3>CONSENTEMENT ÉCLAIRÉ</h3>
+<p>J'atteste avoir reçu cette fiche d'information et en avoir pris connaissance. J'ai compris la nature de l'intervention, ses bénéfices et ses risques (vasculaires, neurologiques, déglutition, voix). J'ai été informé de la possibilité de conversion en arthrodèse en cours d'opération.</p>
+<p><strong>Date :</strong> ____ / ____ / ________</p>
+<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:10px;">
+  <p style="margin:0;flex:1;min-width:280px;"><strong>Nom du patient : </strong>_______________________</p>
+  <p style="margin:0;flex:1;min-width:280px;"><strong>Signature :</strong> _______________________</p>
+</div>
+
+<footer>
+<div><strong>Espace Francilien du Rachis</strong> — 95, rue de Prony, 75017 Paris</div>
+<div>Dr Raphaël Jameson : dr.jameson@rachis.paris · Dr Mayalen Lamerain : dr.mlamerain@gmail.com · Dr Christophe Travert : dr.ctravert@gmail.com</div>
+<div><strong>rachis.paris</strong></div>
+</footer>
+</div>
+</div>
+</body>
+</html>
+
+```
+
+Souhaitez-vous continuer avec la fiche du **Canal Lombaire Étroit** ou celle de l'**Arthrodèse Lombaire** pour compléter votre bibliothèque ?
